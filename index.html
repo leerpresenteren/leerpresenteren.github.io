@@ -45,16 +45,25 @@
     .over-mij{background:var(--paper-soft);} .over-mij .section-head.center{text-align:center; margin-bottom:60px;} .over-mij-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;} .over-mij-text p{font-size:16px; color:var(--text-dim); margin-bottom:22px; line-height:1.8;} .over-mij-text .signature{font-family:'Lora', serif; font-weight:700; font-size:18px; margin-top:32px; color:var(--deep);} .over-mij-photo{width:100%; max-width:320px; aspect-ratio:3/4; border-radius:16px; overflow:hidden; box-shadow:0 16px 40px -8px rgba(29,57,52,0.25); border:2px solid rgba(124,111,201,0.15);} .over-mij-photo img{width:100%; height:100%; object-fit:cover;}
     .card-grid{display:grid; gap:24px; grid-template-columns:repeat(3,1fr);} .card{background:var(--paper-soft); border-radius:16px; padding:24px; border:1px solid rgba(29,57,52,0.08); box-shadow:0 10px 24px rgba(29,57,52,0.04);} .groepen{background:var(--paper-soft);} .groepen-grid{display:grid; gap:24px; grid-template-columns:1fr 1fr; align-items:center;} .groepen-visual{min-height:280px; border-radius:20px; background:linear-gradient(135deg, rgba(124,111,201,0.12), rgba(125,159,152,0.12)); display:flex; align-items:center; justify-content:center; font-family:'Lora', serif; font-size:28px; color:var(--deep);} 
     .contact{background:var(--deep); color:var(--paper-soft); text-align:center; position:relative; overflow:hidden;}
-    .contact .breath-visual{width:220px; height:220px; margin:0 auto 8px; transform:scale(1); position:relative;}
+    .contact .breath-visual{width:150px; height:150px; margin:0 auto 16px; position:relative; aspect-ratio:1 / 1; display:flex; align-items:center; justify-content:center;}
     .contact h2{font-size:clamp(28px,4.6vw,46px); max-width:680px; margin:0 auto 18px;}
     .contact p.lead{color:rgba(238,244,241,0.7); max-width:460px; margin:0 auto 36px;}
     .contact-details{display:flex; gap:36px; justify-content:center; margin-top:48px; flex-wrap:wrap; font-size:14px;}
     .contact-details div{color:rgba(238,244,241,0.65);} .contact-details strong{display:block; color:var(--paper-soft);} 
     footer{background:var(--deep); border-top:1px solid rgba(238,244,241,0.12); color:rgba(238,244,241,0.55); padding:26px 32px; text-align:center; font-size:13px;}
-    .breath-label{position:absolute; left:50%; top:100%; transform:translateX(-50%); margin-top:-2px; color:var(--text-dim); font-size:13px; letter-spacing:0.04em; white-space:nowrap;}
-    .contact .breath-label{color:rgba(238,244,241,0.7);} 
-    .breath-core,.ring,.r1,.breathe{display:none;}
-    @media (max-width: 880px){.hero-inner{grid-template-columns:1fr; gap:28px;} .nav-links{display:none;} .over-mij-grid,.groepen-grid,.card-grid{grid-template-columns:1fr;} section{padding:68px 24px;} .hero-actions{margin-bottom:8px;}}
+    .breath-visual .ring{position:absolute; border:1.5px solid rgba(29,57,52,0.18); border-radius:50%; animation:breathe 10s ease-in-out infinite;}
+    .breath-visual .ring.r1{width:92%; height:92%; animation-delay:0.6s;}
+    .breath-visual .ring.r2{width:70%; height:70%; animation-delay:0.3s;}
+    .breath-core{width:52%; height:52%; border-radius:50%; background:linear-gradient(160deg, var(--lavender), var(--teal)); animation:breathe 10s ease-in-out infinite;}
+    @keyframes breathe{0%{transform:scale(1);} 40%{transform:scale(1.16);} 50%{transform:scale(1.16);} 90%{transform:scale(1);} 100%{transform:scale(1);}}
+    .breath-label{position:absolute; bottom:-34px; left:50%; transform:translateX(-50%); display:inline-grid; font-size:13px; letter-spacing:0.04em; color:var(--text-dim); white-space:nowrap;}
+    .breath-label span{grid-area:1 / 1; animation:10s ease-in-out infinite;}
+    .breath-label .in{animation-name:label-in;}
+    .breath-label .out{animation-name:label-out;}
+    @keyframes label-in{0%,42%{opacity:1;} 50%,92%{opacity:0;} 100%{opacity:1;}}
+    @keyframes label-out{0%,42%{opacity:0;} 50%,92%{opacity:1;} 100%{opacity:0;}}
+    @media (prefers-reduced-motion: reduce){.breath-visual .ring,.breath-core,.breath-label span{animation:none;} .breath-label .out{display:none;}}
+    @media (max-width: 880px){.hero-inner{grid-template-columns:1fr;} .nav-links{display:none;} .over-mij-grid,.groepen-grid,.card-grid{grid-template-columns:1fr;} section{padding:68px 24px;} .hero-actions{margin-bottom:8px;} .contact .breath-visual{width:132px; height:132px; margin:0 auto 14px;}}
   </style>
 </head>
 <body>
@@ -80,6 +89,15 @@
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Plan een kennismaking</a>
       </div>
+    </div>
+    <div class="breath-visual fade-up">
+      <div class="ring r1"></div>
+      <div class="ring r2"></div>
+      <div class="breath-core"></div>
+      <p class="breath-label" aria-hidden="true">
+        <span class="in">adem in</span>
+        <span class="out">adem uit</span>
+      </p>
     </div>
   </div>
 </section>
