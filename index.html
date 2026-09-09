@@ -206,18 +206,38 @@
     max-width:800px;
   }
   .over-mij .section-head.center{text-align:left;}
-  .over-mij p{
+  .over-mij-content{
+    display:grid;
+    grid-template-columns:1fr 120px;
+    gap:24px;
+    align-items:start;
+  }
+  .over-mij-text p{
     font-size:16px;
     color:var(--text-dim);
     margin-bottom:22px;
     line-height:1.8;
   }
-  .over-mij .signature{
+  .over-mij-text .signature{
     font-family:'Lora', serif;
     font-weight:700;
     font-size:18px;
     margin-top:42px;
     color:var(--deep);
+  }
+  .over-mij-photo{
+    width:120px;
+    height:120px;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 6px 16px -6px rgba(29,57,52,0.2);
+    border:1px solid rgba(124,111,201,0.1);
+    flex-shrink:0;
+  }
+  .over-mij-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
   }
 
   /* JOURNEY - van spanning naar zelfvertrouwen */
@@ -348,6 +368,7 @@
     .circles-illustration{margin:0 auto;}
     .card-grid{grid-template-columns:1fr;}
     .nav-links{display:none;}
+    .over-mij-content{grid-template-columns:1fr;}
     section{padding:68px 24px;}
   }
 </style>
@@ -403,18 +424,23 @@
       <span class="eyebrow">Over mij</span>
       <h2>Wie ben ik, en waarom doe ik dit?</h2>
     </div>
-    <div class="fade-up">
-      <p>Je naam wordt genoemd, je loopt naar voren en draait je om. Daar zit je publiek. Je hart gaat wat sneller en het verhaal dat je thuis nog helder had, ligt even verder weg dan je zou willen. De meeste mensen kennen dat gevoel. En de meesten denken op dat moment dat ze de enige zijn.</p>
-      
-      <p>Met precies dat moment werk ik het liefst. Aan de Wageningen Universiteit studeerde ik Onderwijskunde en Voorlichtingskunde, en eigenlijk draaide alles daar al om de twee vragen die me nog steeds bezighouden: hoe leren mensen iets nieuws, en hoe breng je een boodschap over die werkelijk aankomt.</p>
-      
-      <p>Ik heb ook zelf regelmatig op het podium gestaan. Onder andere met een hoofdrol in een studentenmusical, in mijn eigen poppentheater en tijdens internationale bijeenkomsten als coördinator van het team duurzaamheid bij het Hout- en Meubileringscollege. Wat me daarvan het meest is bijgebleven, is dat de zenuwen zelden alleen over de presentatie zelf gingen. Het ging over wie er in de zaal zat, over wat ik dacht dat er van me verwacht werd, over de angst om spreekruimte in te nemen.</p>
-      
-      <p>Dat is ook de reden dat ik systemisch werk. Wie voor een groep staat, staat er namelijk nooit in zijn eentje: de groep kijkt mee, jouw plek daarin doet mee, en al die verwachtingen die je onbewust meedraagt doen ook mee. Ik kijk daarom niet alleen naar wat je doet terwijl je staat, maar ook naar wat er om je heen en in je meespeelt. Juist daar ligt vaak de sleutel.</p>
-      
-      <p>Het allerbelangrijkste vind ik dat een groep veilig is, want pas als je weet dat het mag mislukken, durf je iets nieuws te proberen. En zodra die veiligheid er is, gaat het vaak verrassend snel, met veel plezier onderweg. Dat laatste is misschien wel wat ik het liefst breng.</p>
-      
-      <div class="signature">Jacqueline</div>
+    <div class="over-mij-content fade-up">
+      <div class="over-mij-text">
+        <p>Je naam wordt genoemd, je loopt naar voren en draait je om. Daar zit je publiek. Je hart gaat wat sneller en het verhaal dat je thuis nog helder had, ligt even verder weg dan je zou willen.</p>
+        
+        <p>Met precies dat moment werk ik het liefst. Aan de Wageningen Universiteit studeerde ik Onderwijskunde en Voorlichtingskunde, en eigenlijk draaide alles daar al om de twee vragen die me niet loslaten: hoe help je mensen hun verhaal duidelijk te vertellen, en hoe zorg je dat ze zich daarin veilig voelen?</p>
+        
+        <p>Ik heb ook zelf regelmatig op het podium gestaan. Onder andere met een hoofdrol in een studentenmusical, in mijn eigen poppentheater en tijdens internationale bijeenkomsten als coördinator. En ja, ook ik voelde die spanning. Maar ik leerde ook: die spanning hoeft geen faalangst te zijn.</p>
+        
+        <p>Dat is ook de reden dat ik systemisch werk. Wie voor een groep staat, staat er namelijk nooit in zijn eentje: de groep kijkt mee, jouw plek daarin doet mee, en al die verwachtingen die je meedraagt spelen een rol.</p>
+        
+        <p>Het allerbelangrijkste vind ik dat een groep veilig is, want pas als je weet dat het mag mislukken, durf je iets nieuws te proberen. En zodra die veiligheid er is, gaat het vaak verassend goed. Dat is waar ik echt energie van krijg.</p>
+        
+        <div class="signature">Jacqueline</div>
+      </div>
+      <div class="over-mij-photo">
+        <img src="jacqueline.png" alt="Jacqueline de Kok-Hoeksema">
+      </div>
     </div>
   </div>
 </section>
