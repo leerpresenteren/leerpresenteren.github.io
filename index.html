@@ -203,14 +203,14 @@
   /* OVER MIJ */
   .over-mij{background:var(--paper-soft);}
   .over-mij .wrap{
-    max-width:800px;
+    max-width:1000px;
   }
-  .over-mij .section-head.center{text-align:left;}
-  .over-mij-content{
+  .over-mij .section-head.center{text-align:center; margin-bottom:60px;}
+  .over-mij-grid{
     display:grid;
-    grid-template-columns:1fr 120px;
-    gap:24px;
-    align-items:start;
+    grid-template-columns:1fr 1fr;
+    gap:48px;
+    align-items:center;
   }
   .over-mij-text p{
     font-size:16px;
@@ -222,17 +222,17 @@
     font-family:'Lora', serif;
     font-weight:700;
     font-size:18px;
-    margin-top:42px;
+    margin-top:32px;
     color:var(--deep);
   }
   .over-mij-photo{
-    width:120px;
-    height:120px;
-    border-radius:12px;
+    width:100%;
+    max-width:320px;
+    aspect-ratio:3/4;
+    border-radius:16px;
     overflow:hidden;
-    box-shadow:0 6px 16px -6px rgba(29,57,52,0.2);
-    border:1px solid rgba(124,111,201,0.1);
-    flex-shrink:0;
+    box-shadow:0 16px 40px -8px rgba(29,57,52,0.25);
+    border:2px solid rgba(124,111,201,0.15);
   }
   .over-mij-photo img{
     width:100%;
@@ -368,7 +368,7 @@
     .circles-illustration{margin:0 auto;}
     .card-grid{grid-template-columns:1fr;}
     .nav-links{display:none;}
-    .over-mij-content{grid-template-columns:1fr;}
+    .over-mij-grid{grid-template-columns:1fr;}
     section{padding:68px 24px;}
   }
 </style>
@@ -424,7 +424,7 @@
       <span class="eyebrow">Over mij</span>
       <h2>Wie ben ik, en waarom doe ik dit?</h2>
     </div>
-    <div class="over-mij-content fade-up">
+    <div class="over-mij-grid fade-up">
       <div class="over-mij-text">
         <p>Je naam wordt genoemd, je loopt naar voren en draait je om. Daar zit je publiek. Je hart gaat wat sneller en het verhaal dat je thuis nog helder had, ligt even verder weg dan je zou willen.</p>
         
@@ -438,7 +438,7 @@
         
         <div class="signature">Jacqueline</div>
       </div>
-      <div class="over-mij-photo">
+      <div class="over-mij-photo fade-up">
         <img src="jacqueline.png" alt="Jacqueline de Kok-Hoeksema">
       </div>
     </div>
