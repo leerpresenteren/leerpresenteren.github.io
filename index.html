@@ -45,8 +45,15 @@
     .info-text{max-width:760px; margin:0 auto; color:var(--text-dim); font-size:16px; line-height:1.9;}
     .over-mij{background:var(--paper-soft);} .over-mij .section-head.center{text-align:center; margin-bottom:60px;} .over-mij-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;} .over-mij-text p{font-size:16px; color:var(--text-dim); margin-bottom:22px; line-height:1.8;} .over-mij-text .signature{font-family:'Lora', serif; font-weight:700; font-size:18px; margin-top:32px; color:var(--deep);} .over-mij-photo{width:100%; max-width:320px; aspect-ratio:3/4; border-radius:16px; overflow:hidden; box-shadow:0 16px 40px -8px rgba(29,57,52,0.25); border:2px solid rgba(124,111,201,0.15);} .over-mij-photo img{width:100%; height:100%; object-fit:cover;}
     .card-grid{display:grid; gap:24px; grid-template-columns:repeat(3,1fr);} .card{background:var(--paper-soft); border-radius:16px; padding:24px; border:1px solid rgba(29,57,52,0.08); box-shadow:0 10px 24px rgba(29,57,52,0.04);} .groepen{background:var(--paper-soft);} .groepen-grid{display:grid; gap:24px; grid-template-columns:1fr 1fr; align-items:center;} .groepen-visual{min-height:280px; border-radius:20px; background:linear-gradient(135deg, rgba(124,111,201,0.12), rgba(125,159,152,0.12)); display:flex; align-items:center; justify-content:center; font-family:'Lora', serif; font-size:28px; color:var(--deep);} 
-    .contact{background:var(--deep); color:var(--paper-soft); text-align:center; position:relative; overflow:hidden;} .contact .breath-visual{width:130px; height:130px; margin:0 auto 32px; transform:scale(0.8);} .contact h2{font-size:clamp(28px,4.6vw,46px); max-width:680px; margin:0 auto 18px;} .contact p.lead{color:rgba(238,244,241,0.7); max-width:460px; margin:0 auto 36px;} .contact-details{display:flex; gap:36px; justify-content:center; margin-top:48px; flex-wrap:wrap; font-size:14px;} .contact-details div{color:rgba(238,244,241,0.65);} .contact-details strong{display:block; color:var(--paper-soft);} 
+    .contact{background:var(--deep); color:var(--paper-soft); text-align:center; position:relative; overflow:hidden;} .contact .breath-visual{width:130px; height:130px; margin:0 auto 32px; transform:scale(0.8); position:relative;} .contact h2{font-size:clamp(28px,4.6vw,46px); max-width:680px; margin:0 auto 18px;} .contact p.lead{color:rgba(238,244,241,0.7); max-width:460px; margin:0 auto 36px;} .contact-details{display:flex; gap:36px; justify-content:center; margin-top:48px; flex-wrap:wrap; font-size:14px;} .contact-details div{color:rgba(238,244,241,0.65);} .contact-details strong{display:block; color:var(--paper-soft);} 
     footer{background:var(--deep); border-top:1px solid rgba(238,244,241,0.12); color:rgba(238,244,241,0.55); padding:26px 32px; text-align:center; font-size:13px;}
+    .breath-label{position:absolute; left:50%; top:100%; transform:translateX(-50%); margin-top:14px; color:var(--text-dim); font-size:13px; letter-spacing:0.04em; white-space:nowrap;}
+    .contact .breath-label{color:rgba(238,244,241,0.7);} 
+    .breath-core{position:absolute; inset:50%; width:42px; height:42px; border-radius:50%; background:radial-gradient(circle at 35% 35%, #ffffff, rgba(124,111,201,0.95) 60%, rgba(124,111,201,0.45)); transform:translate(-50%,-50%) scale(1); box-shadow:0 0 0 0 rgba(124,111,201,0.18);} 
+    .ring{position:absolute; inset:50%; width:42px; height:42px; border-radius:50%; border:2px solid rgba(124,111,201,0.28); transform:translate(-50%,-50%) scale(1.15);}
+    .r1{animation:ringPulse 4s ease-in-out infinite;} .breathe{animation:breathing 4s ease-in-out infinite;}
+    @keyframes breathing{0%,100%{transform:translate(-50%,-50%) scale(0.92);} 50%{transform:translate(-50%,-50%) scale(1.18);}}
+    @keyframes ringPulse{0%,100%{opacity:.3; transform:translate(-50%,-50%) scale(1.08);} 50%{opacity:.08; transform:translate(-50%,-50%) scale(1.38);}}
     @media (max-width: 880px){.hero-inner{grid-template-columns:1fr;} .nav-links{display:none;} .over-mij-grid,.groepen-grid,.card-grid{grid-template-columns:1fr;} section{padding:68px 24px;}}
   </style>
 </head>
@@ -126,7 +133,7 @@
 
 <section class="contact" id="contact">
   <div class="wrap">
-    <div class="breath-visual"><div class="ring r1"></div><div class="breath-core breathe"></div></div>
+    <div class="breath-visual"><div class="ring r1"></div><div class="breath-core breathe"></div><span class="breath-label">adem in · adem uit</span></div>
     <span class="eyebrow" style="color:var(--lavender-soft);">Contact</span>
     <h2>Laten we rustig kennismaken</h2>
     <p class="lead">Een vrijblijvend gesprek, zonder verplichtingen — gewoon even voelen of het bij je past.</p>
