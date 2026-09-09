@@ -53,13 +53,8 @@
     footer{background:var(--deep); border-top:1px solid rgba(238,244,241,0.12); color:rgba(238,244,241,0.55); padding:26px 32px; text-align:center; font-size:13px;}
     .breath-label{position:absolute; left:50%; top:100%; transform:translateX(-50%); margin-top:-2px; color:var(--text-dim); font-size:13px; letter-spacing:0.04em; white-space:nowrap;}
     .contact .breath-label{color:rgba(238,244,241,0.7);} 
-    .breath-core{position:absolute; inset:50%; width:64px; height:64px; border-radius:50%; background:radial-gradient(circle at 35% 35%, #ffffff, rgba(124,111,201,0.95) 60%, rgba(124,111,201,0.45)); transform:translate(-50%,-50%) scale(1); box-shadow:0 0 0 0 rgba(124,111,201,0.18);} 
-    .ring{position:absolute; inset:50%; width:64px; height:64px; border-radius:50%; border:2px solid rgba(124,111,201,0.28); transform:translate(-50%,-50%) scale(1.15);}
-    .r1{animation:ringPulse 4s ease-in-out infinite;} .breathe{animation:breathing 4s ease-in-out infinite;}
-    @keyframes breathing{0%,100%{transform:translate(-50%,-50%) scale(0.92);} 50%{transform:translate(-50%,-50%) scale(1.18);}}
-    @keyframes ringPulse{0%,100%{opacity:.3; transform:translate(-50%,-50%) scale(1.08);} 50%{opacity:.08; transform:translate(-50%,-50%) scale(1.38);}}
-    @media (max-width: 880px){.hero-inner{grid-template-columns:1fr; gap:28px;} .nav-links{display:none;} .over-mij-grid,.groepen-grid,.card-grid{grid-template-columns:1fr;} section{padding:68px 24px;} .hero .breath-visual,.contact .breath-visual{width:160px; height:160px; margin:0 auto 14px;} .hero .breath-core,.hero .ring,.contact .breath-core,.contact .ring{width:52px; height:52px;} .breath-label{font-size:12px; margin-top:-1px;} .hero-actions{margin-bottom:8px;}}
-    @media (min-width: 881px){.hero .breath-visual{margin-bottom:0;}.hero .breath-label{margin-top:-42px;}}
+    .breath-core,.ring,.r1,.breathe{display:none;}
+    @media (max-width: 880px){.hero-inner{grid-template-columns:1fr; gap:28px;} .nav-links{display:none;} .over-mij-grid,.groepen-grid,.card-grid{grid-template-columns:1fr;} section{padding:68px 24px;} .hero-actions{margin-bottom:8px;}}
   </style>
 </head>
 <body>
@@ -86,7 +81,6 @@
         <a href="#contact" class="btn btn-primary">Plan een kennismaking</a>
       </div>
     </div>
-    <div class="breath-visual fade-up"><div class="ring r1"></div><div class="breath-core breathe"></div><span class="breath-label">adem in · adem uit</span></div>
   </div>
 </section>
 
@@ -138,7 +132,6 @@
 
 <section class="contact" id="contact">
   <div class="wrap">
-    <div class="breath-visual"><div class="ring r1"></div><div class="breath-core breathe"></div><span class="breath-label">adem in · adem uit</span></div>
     <span class="eyebrow" style="color:var(--lavender-soft);">Contact</span>
     <h2>Laten we rustig kennismaken</h2>
     <p class="lead">Een vrijblijvend gesprek, zonder verplichtingen. Om te kunnen voelen of ik iets voor je kan betekenen.</p>
