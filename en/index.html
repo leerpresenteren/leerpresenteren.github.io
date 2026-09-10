@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn How to Present</title>
+  <link rel="canonical" href="https://learnhowtopresent.eu/" />
+  <link rel="alternate" hreflang="en" href="https://learnhowtopresent.eu/" />
+  <link rel="alternate" hreflang="nl" href="https://leerpresenteren.eu/" />
+  <link rel="alternate" hreflang="x-default" href="https://leerpresenteren.eu/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#eef4f1;--paper-soft:#f7faf8;--deep:#1d3934;--deep-soft:#2d4c46;--teal:#7d9f98;--lavender:#7c6fc9;--lavender-soft:#c8c0ef;--blush:#f3d7cf;--text:#24413c;--text-dim:#52655f;--r:24px;}
+    *{box-sizing:border-box; margin:0; padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Karla', sans-serif; background:var(--paper); color:var(--deep); line-height:1.6; -webkit-font-smoothing:antialiased;}
+    h1,h2,h3{font-family:'Lora', serif; letter-spacing:-0.01em;}
+    a{color:inherit; text-decoration:none;}
+    .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+    :focus-visible{outline:3px solid var(--lavender); outline-offset:3px; border-radius:6px;}
+    .eyebrow{font-size:13px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--teal);}
+    header{position:sticky; top:0; z-index:50; background:rgba(238,244,241,0.9); backdrop-filter:blur(10px); border-bottom:1px solid rgba(29,57,52,0.1);}
+    nav{display:flex; align-items:center; justify-content:space-between; padding:18px 32px; max-width:1120px; margin:0 auto;}
+    .brand{display:flex; flex-direction:column;}
+    .brand .word{font-family:'Lora', serif; font-weight:700; font-size:20px; color:var(--deep);}
+    .brand .word span{color:var(--lavender);}
+    .brand .domains{font-size:11px; color:var(--text-dim); letter-spacing:0.02em;}
+    .brand .domains a{color:inherit; text-decoration:underline;}
+    .brand .domains a:hover{color:var(--lavender);}
+    .nav-links{display:flex; gap:32px; list-style:none;}
+    .nav-links a{font-size:15px; font-weight:600; color:var(--deep-soft); transition:color 0.2s;}
+    .nav-links a:hover{color:var(--lavender);}
+    .nav-cta{font-size:14px; font-weight:700; padding:11px 22px; background:var(--deep); color:var(--paper-soft); border-radius:100px; transition:transform 0.15s ease, background 0.2s;}
+    .nav-cta:hover{background:var(--lavender); transform:translateY(-2px);}
+    .hero{position:relative; padding:100px 32px 90px; overflow:hidden;}
+    .hero-inner{position:relative; z-index:2; max-width:1120px; margin:0 auto; display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;}
+    .hero h1{font-size:clamp(32px, 4.6vw, 52px); line-height:1.15; margin-bottom:22px;}
+    .hero p.lead{font-size:17.5px; color:var(--text-dim); max-width:460px; margin-bottom:32px;}
+    .hero-actions{display:flex; gap:14px; flex-wrap:wrap;}
+    .btn{font-family:'Karla', sans-serif; font-size:15px; font-weight:700; padding:15px 28px; border-radius:100px; display:inline-block; cursor:pointer; border:2px solid transparent; transition:transform 0.15s ease, box-shadow 0.2s ease, background 0.2s, color 0.2s;}
+    .btn:hover{transform:translateY(-2px);} .btn-primary{background:var(--lavender); color:#fff;} .btn-ghost{background:transparent; color:var(--deep); border-color:rgba(29,57,52,0.2);} .btn-ghost:hover{border-color:var(--lavender); color:var(--lavender); background:rgba(124,111,201,0.06);}
+    .about,.contact,.approach,.groups,.personal-guidance{scroll-margin-top:90px;}
+    section{padding:96px 32px;}
+    .section-head{max-width:600px; margin-bottom:52px;}
+    .section-head.center{text-align:center; margin-left:auto; margin-right:auto;}
+    .section-head .eyebrow{margin-bottom:14px; display:block;}
+    .section-head h2{font-size:clamp(27px, 4vw, 40px);}
+    .info-text{max-width:760px; margin:0 auto; color:var(--text-dim); font-size:16px; line-height:1.9;}
+    .about{background:var(--paper-soft);} .about .section-head.center{text-align:center; margin-bottom:60px;} .about-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;} .about-text p{font-size:16px; color:var(--text-dim); margin-bottom:22px; line-height:1.8;} .about-text .signature{font-family:'Lora', serif; font-weight:700; font-size:18px; margin-top:32px; color:var(--deep);} .about-photo{width:100%; max-width:320px; aspect-ratio:3/4; border-radius:16px; overflow:hidden; box-shadow:0 16px 40px -8px rgba(29,57,52,0.25); border:2px solid rgba(124,111,201,0.15);} .about-photo img{width:100%; height:100%; object-fit:cover;}
+    .card-grid{display:grid; gap:24px; grid-template-columns:repeat(3,1fr);} .card{background:var(--paper-soft); border-radius:16px; padding:24px; border:1px solid rgba(29,57,52,0.08); box-shadow:0 10px 24px rgba(29,57,52,0.04);} .groups{background:var(--paper-soft);} .groups-grid{display:grid; gap:24px; grid-template-columns:1fr 1fr; align-items:center;} .groups-visual{min-height:280px; border-radius:20px; background:linear-gradient(135deg, rgba(124,111,201,0.12), rgba(125,159,152,0.12)); display:flex; align-items:center; justify-content:center; font-family:'Lora', serif; font-size:28px; color:var(--deep);} 
+    .contact{background:var(--deep); color:var(--paper-soft); text-align:center; position:relative; overflow:hidden;}
+    .contact .breath-visual{width:150px; height:150px; margin:0 auto 16px; position:relative; aspect-ratio:1 / 1; display:flex; align-items:center; justify-content:center;}
+    .contact h2{font-size:clamp(28px,4.6vw,46px); max-width:680px; margin:0 auto 18px;}
+    .contact p.lead{color:rgba(238,244,241,0.7); max-width:460px; margin:0 auto 36px;}
+    .contact-details{display:flex; gap:36px; justify-content:center; margin-top:48px; flex-wrap:wrap; font-size:14px;}
+    .contact-details div{color:rgba(238,244,241,0.65);} .contact-details strong{display:block; color:var(--paper-soft);} 
+    footer{background:var(--deep); border-top:1px solid rgba(238,244,241,0.12); color:rgba(238,244,241,0.55); padding:26px 32px; text-align:center; font-size:13px;}
+    .breath-visual .ring{position:absolute; border:1.5px solid rgba(29,57,52,0.18); border-radius:50%; animation:breathe 10s ease-in-out infinite;}
+    .breath-visual .ring.r1{width:92%; height:92%; animation-delay:0.6s;}
+    .breath-visual .ring.r2{width:70%; height:70%; animation-delay:0.3s;}
+    .breath-core{width:52%; height:52%; border-radius:50%; background:linear-gradient(160deg, var(--lavender), var(--teal)); animation:breathe 10s ease-in-out infinite;}
+    @keyframes breathe{0%{transform:scale(1);} 40%{transform:scale(1.16);} 50%{transform:scale(1.16);} 90%{transform:scale(1);} 100%{transform:scale(1);}}
+    .breath-label{position:absolute; bottom:-34px; left:50%; transform:translateX(-50%); display:inline-grid; font-size:13px; letter-spacing:0.04em; color:var(--text-dim); white-space:nowrap;}
+    .breath-label span{grid-area:1 / 1; animation:10s ease-in-out infinite;}
+    .breath-label .in{animation-name:label-in;}
+    .breath-label .out{animation-name:label-out;}
+    @keyframes label-in{0%,42%{opacity:1;} 50%,92%{opacity:0;} 100%{opacity:1;}}
+    @keyframes label-out{0%,42%{opacity:0;} 50%,92%{opacity:1;} 100%{opacity:0;}}
+    @media (prefers-reduced-motion: reduce){.breath-visual .ring,.breath-core,.breath-label span{animation:none;} .breath-label .out{display:none;}}
+    @media (max-width: 880px){.hero-inner{grid-template-columns:1fr;} .nav-links{display:none;} .about-grid,.groups-grid,.card-grid{grid-template-columns:1fr;} section{padding:68px 24px;} .hero-actions{margin-bottom:8px;} .contact .breath-visual{width:132px; height:132px; margin:0 auto 14px;}}
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="#top" class="brand"><span class="word">learn<span>How to Present</span></span><span class="domains"><a href="https://leerpresenteren.eu/" lang="nl" hreflang="nl">Nederlands</a> · learnhowtopresent.eu</span></a>
+    <ul class="nav-links">
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#groups">In a group</a></li>
+      <li><a href="#personal-guidance">Personal guidance</a></li>
+      <li><a href="#about">About me</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://leerpresenteren.eu/" lang="nl" hreflang="nl">Nederlands</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Plan an introduction</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <h1>Step by step, you learn to present calmly and with confidence.</h1>
+      <p class="lead">In a small, safe group or with personal guidance.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Plan an introduction</a>
+      </div>
+    </div>
+    <div class="breath-visual fade-up"><div class="ring r1"></div><div class="breath-core breathe"></div><span class="breath-label">breathe in · breathe out</span></div>
+  </div>
+</section>
+
+<section class="approach" id="approach">
+  <div class="wrap">
+    <div class="section-head center fade-up"><span class="eyebrow">Approach</span><h2>From tension to confidence</h2></div>
+    <div class="info-text fade-up">
+      <p>You mainly learn to present by doing it, not just by reading about it. That is why you start practising in small steps from the very first session. This can be one-to-one or in a safe group setting. A place where there is room to try things out, search, and sometimes get stuck for a moment. That is exactly where growth begins. And with a touch of humour, a lot of tension falls away.</p>
+      <p>After an introductory conversation, I create a tailored programme so it matches what you or your team need in order to present with more calm and confidence.</p>
+    </div>
+  </div>
+</section>
+
+<section class="groups" id="groups">
+  <div class="wrap">
+    <div class="section-head center fade-up"><span class="eyebrow">In a group</span><h2>Learning in a small, safe group</h2></div>
+    <div class="info-text fade-up">
+      <p><strong>One-day workshop</strong> — A day to experience what happens when you stand in front of a group and to discover that it is less frightening than you expected. You practise several times in a group that stays small enough for everyone to take part.</p>
+      <p><strong>Multi-day training</strong> — More time, and therefore more depth. Between the training days, there is room to practise what you have learned so it really stays with you. By the end, you will have delivered a presentation you feel good about.</p>
+      <p><strong>Private programme</strong> — For a team, class, or company that wants to practise together. Because you already know each other, the focus is different: safety in an existing group asks for something different than safety among strangers. We determine the content and duration together.</p>
+    </div>
+  </div>
+</section>
+
+<section class="personal-guidance" id="personal-guidance">
+  <div class="wrap">
+    <div class="section-head center fade-up"><span class="eyebrow">Personal guidance</span><h2>For one specific moment</h2></div>
+    <div class="info-text fade-up">
+      <p>Focused preparation for one specific moment when you need to speak: a conference presentation, a pitch to leadership, a client conversation, or a job interview. We work at your pace on the structure of your story and your presentation materials. After that, we work on your posture, voice, and confidence.</p>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="section-head center fade-up"><span class="eyebrow">About me</span><h2>Who am I, and why do I do this?</h2></div>
+    <div class="about-grid fade-up">
+      <div class="about-text">
+        <p>During my studies in Educational Science and Communication at Wageningen University &amp; Research, I learned how to bring a message across clearly. I wanted to be in front of an audience from a young age, and through singing and theatre performances I discovered what it feels like to stand in the spotlight. And also what tension does to you the moment everyone is looking at you.</p>
+        <p>During several trainings in systemic work, I learned about taking your place in your system of origin. That same question comes up the moment you stand in front of a room, because an audience can feel within seconds whether you are taking your place. If you make yourself too small, you apologise for your own story; if you make yourself too big, you claim a position that is not yours there.</p>
+        <p>And you bring along more than you think. Beliefs you picked up at home, such as just act normal or do not stand out, unconsciously shape how you stand in front of a group and how you look at your audience. We explore those beliefs together, because as long as they remain invisible, they keep pulling at you.</p>
+        <p>That requires safety, and that is why it is always the starting point. Only when you know you are allowed to fail do you dare to try something new. And as soon as that space is there, you show up differently. You notice it immediately yourself, and your audience sees it too.</p>
+        <div class="signature">Jacqueline</div>
+      </div>
+      <div class="about-photo fade-up"><img src="/jacqueline.png" alt="Jacqueline de Kok-Hoeksema"></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="eyebrow" style="color:var(--lavender-soft);">Contact</span>
+    <h2>Let’s get acquainted in a calm way</h2>
+    <p class="lead">A free introductory conversation, with no obligations. A moment to sense whether I can help you.</p>
+    <a href="mailto:info@leerpresenteren.eu" class="btn btn-primary">Send a message</a>
+    <div class="contact-details"><div><strong>Email</strong>info@leerpresenteren.eu</div><div><strong>Contact person</strong>Jacqueline de Kok-Hoeksema</div><div><strong>Phone</strong>06 - 28196939</div></div>
+  </div>
+</section>
+
+<footer>© Learn How to Present</footer>
+</body>
+</html>

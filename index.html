@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leerpresenteren</title>
+  <link rel="canonical" href="https://leerpresenteren.eu/" />
+  <link rel="alternate" hreflang="nl" href="https://leerpresenteren.eu/" />
+  <link rel="alternate" hreflang="en" href="https://learnhowtopresent.eu/" />
+  <link rel="alternate" hreflang="x-default" href="https://leerpresenteren.eu/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Lora:wght@400;700&display=swap" rel="stylesheet">
@@ -23,6 +27,8 @@
     .brand .word{font-family:'Lora', serif; font-weight:700; font-size:20px; color:var(--deep);}
     .brand .word span{color:var(--lavender);}
     .brand .domains{font-size:11px; color:var(--text-dim); letter-spacing:0.02em;}
+    .brand .domains a{color:inherit; text-decoration:underline;}
+    .brand .domains a:hover{color:var(--lavender);}
     .nav-links{display:flex; gap:32px; list-style:none;}
     .nav-links a{font-size:15px; font-weight:600; color:var(--deep-soft); transition:color 0.2s;}
     .nav-links a:hover{color:var(--lavender);}
@@ -69,13 +75,14 @@
 <body>
 <header>
   <nav>
-    <a href="#top" class="brand"><span class="word">leer<span>Presenteren</span></span><span class="domains">leerpresenteren.eu · learnhowtopresent.eu</span></a>
+    <a href="#top" class="brand"><span class="word">leer<span>Presenteren</span></span><span class="domains">leerpresenteren.eu · <a href="https://learnhowtopresent.eu/" lang="en" hreflang="en">English</a></span></a>
     <ul class="nav-links">
       <li><a href="#aanpak">Aanpak</a></li>
       <li><a href="#groepen">In een groep</a></li>
       <li><a href="#persoonlijke-begeleiding">Persoonlijke begeleiding</a></li>
       <li><a href="#over-mij">Over mij</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="https://learnhowtopresent.eu/" lang="en" hreflang="en">English</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Vrijblijvend kennismaken</a>
   </nav>
