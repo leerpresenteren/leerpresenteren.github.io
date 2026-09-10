@@ -53,6 +53,9 @@
     .card-grid{display:grid; gap:24px; grid-template-columns:repeat(3,1fr);} .card{background:var(--paper-soft); border-radius:16px; padding:24px; border:1px solid rgba(29,57,52,0.08); box-shadow:0 10px 24px rgba(29,57,52,0.04);} .groups{background:var(--paper-soft);} .groups-grid{display:grid; gap:24px; grid-template-columns:1fr 1fr; align-items:center;} .groups-visual{min-height:280px; border-radius:20px; background:linear-gradient(135deg, rgba(124,111,201,0.12), rgba(125,159,152,0.12)); display:flex; align-items:center; justify-content:center; font-family:'Lora', serif; font-size:28px; color:var(--deep);} 
     .contact{background:var(--deep); color:var(--paper-soft); text-align:center; position:relative; overflow:hidden;}
     .contact .eyebrow{color:var(--lavender-soft);}
+    .contact-actions{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+    .contact .btn-ghost{color:var(--paper-soft); border-color:rgba(238,244,241,0.35);}
+    .contact .btn-ghost:hover{background:rgba(238,244,241,0.08); color:var(--paper-soft); border-color:var(--lavender-soft);}
     .contact .breath-visual{width:150px; height:150px; margin:0 auto 16px; position:relative; aspect-ratio:1 / 1; display:flex; align-items:center; justify-content:center;}
     .contact h2{font-size:clamp(28px,4.6vw,46px); max-width:680px; margin:0 auto 18px;}
     .contact p.lead{color:rgba(238,244,241,0.7); max-width:460px; margin:0 auto 36px;}
@@ -150,7 +153,10 @@
     <span class="eyebrow">Contact</span>
     <h2>Let’s get acquainted in a calm way</h2>
     <p class="lead">A free introductory conversation, with no obligations. A moment to sense whether I can help you.</p>
-    <a href="mailto:info@leerpresenteren.eu" class="btn btn-primary">Send a message</a>
+    <div class="contact-actions">
+      <a href="mailto:info@leerpresenteren.eu" class="btn btn-primary">Send a message</a>
+      <a href="tel:+31628196939" class="btn btn-ghost">Call now</a>
+    </div>
     <dl class="contact-details"><dt>Contact person</dt><dd>Jacqueline de Kok-Hoeksema</dd><dt>Phone</dt><dd><a href="tel:+31628196939">+31 6 28196939</a></dd></dl>
   </div>
 </section>
