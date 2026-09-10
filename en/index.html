@@ -66,7 +66,7 @@
     .breath-core{width:52%; height:52%; border-radius:50%; background:linear-gradient(160deg, var(--lavender), var(--teal)); animation:breathe 10s ease-in-out infinite;}
     @keyframes breathe{0%{transform:scale(1);} 40%{transform:scale(1.16);} 50%{transform:scale(1.16);} 90%{transform:scale(1);} 100%{transform:scale(1);}}
     @media (prefers-reduced-motion: reduce){.breath-visual .ring,.breath-core{animation:none;}}
-    @media (max-width: 880px){.hero-inner{grid-template-columns:1fr;} .nav-links{display:none;} .about-grid,.groups-grid,.card-grid{grid-template-columns:1fr;} section{padding:68px 24px;} .hero-actions{margin-bottom:8px;} .contact .breath-visual{width:132px; height:132px; margin:0 auto 14px;} .contact-details{grid-template-columns:1fr; text-align:center;}}
+    @media (max-width: 880px){nav{flex-direction:column; align-items:flex-start; gap:16px;} .hero-inner{grid-template-columns:1fr;} .nav-links{gap:16px; flex-wrap:wrap;} .about-grid,.groups-grid,.card-grid{grid-template-columns:1fr;} section{padding:68px 24px;} .hero-actions{margin-bottom:8px;} .contact .breath-visual{width:132px; height:132px; margin:0 auto 14px;} .contact-details{grid-template-columns:1fr; text-align:center;}}
   </style>
 </head>
 <body>
